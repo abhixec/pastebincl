@@ -14,7 +14,7 @@
  *   See first license line.
  *
  * LICENSE:
- *   "Command-line pastebin" is a software designed to submit a "paste" on http://pastebin.com/ using a command-line tool
+ *   "Command-line pastebin" is a software designed to submit a "paste" on https://pastebin.com/ using a command-line tool
  *   Copyright (C) 2011  Théophile BASTIAN
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -40,7 +40,7 @@
 	To compile the project, RENAME THIS FILE TO "data_devcode.h" :
 	$ mv data_devcode_default.h data_devcode.h
 	Then enter your Developper key on the #define DEVELOPPER_CODE line.
-	To obtain one, just create an account on http://pastebin.com/ and then go to http://pastebin.com/api.
+	To obtain one, just create an account on https://pastebin.com/ and then go to https://pastebin.com/api.
 */
 
 #ifndef DEF_DATADEVCODE
@@ -49,4 +49,3 @@
 #define DEVELOPPER_CODE "" // TODO: Enter your Pastebin Developper Key here
 
 #endif//DEF_DATADEVCODE
-

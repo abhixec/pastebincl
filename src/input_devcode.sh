@@ -2,7 +2,7 @@
 
 while true; do
 
-	echo "Enter your Pastebin Developper API Key (see http://pastebin.com/api), or leave blank to use the default one (may not work):"
+	echo "Enter your Pastebin Developper API Key (see https://pastebin.com/api), or leave blank to use the default one (may not work):"
 	read input
 
 	if [ -z $input ] ; then
@@ -25,4 +25,3 @@ done
 
 sed -ire "49s/\"\".*$/\"${input}\"/" data_devcode.h
 echo "Success!"
-

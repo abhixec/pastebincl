@@ -14,7 +14,7 @@
  *   See first license line.
  *
  * LICENSE:
- *   "Command-line pastebin" is a software designed to submit a "paste" on http://pastebin.com/ using a command-line tool
+ *   "Command-line pastebin" is a software designed to submit a "paste" on https://pastebin.com/ using a command-line tool
  *   Copyright (C) 2011  Théophile BASTIAN
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -71,7 +71,7 @@ std::string CurlPost::execute()
 
 		// begin request
 		res=curl_easy_perform(curl);
-		
+
 		// cleaning up
 		curl_easy_cleanup(curl);
 		curl_formfree(formpost);
@@ -106,4 +106,3 @@ size_t postRequest_callbackReadout(char* ptr, size_t size, size_t nmemb, void* i
 	}
 	return size*nmemb;
 }
-
