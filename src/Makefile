@@ -1,4 +1,5 @@
 # Makefile for pastebincl (command-line pastebin) by BASTIAN Théophile (aka Tobast)
+SHELL := /bin/bash # Use bash syntax
 
 ENC_KEY=`python genkey.py`
 
@@ -40,4 +41,3 @@ clean:
 
 mrproper: clean
 	rm -f $(TARGET)
-

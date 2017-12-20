@@ -14,7 +14,7 @@
  *   See first license line.
  *
  * LICENSE:
- *   "Command-line pastebin" is a software designed to submit a "paste" on http://pastebin.com/ using a command-line tool
+ *   "Command-line pastebin" is a software designed to submit a "paste" on https://pastebin.com/ using a command-line tool
  *   Copyright (C) 2011  Théophile BASTIAN
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -40,7 +40,7 @@ ConfigRead::ConfigRead(string filepath)
 	ifstream infile(filepath.c_str(), ios_base::in);
 	if(!infile)
 		throw -42; // ANTI-ANSWER!!!1
-	
+
 	string filecontent=unxor(infile);
 
 	unsigned findpos;
@@ -63,9 +63,9 @@ bool ConfigRead::writeConf(std::string user, std::string pass, std::string filep
 	ofstream outfile(filepath.c_str(), ios_base::out | ios_base::trunc);
 	if(!outfile)
 		return false;
-	
+
 	string key=ENCODING_KEY, input=user+"\n"+pass;
-	
+
 	for(unsigned i=0, j=0; j<input.size(); i++, j++)
 	{
 		if(i>=key.size())
@@ -92,4 +92,3 @@ std::string ConfigRead::unxor(ifstream& infile)
 
 	return output;
 }
-

@@ -14,7 +14,7 @@
  *   See first license line.
  *
  * LICENSE:
- *   "Command-line pastebin" is a software designed to submit a "paste" on http://pastebin.com/ using a command-line tool
+ *   "Command-line pastebin" is a software designed to submit a "paste" on https://pastebin.com/ using a command-line tool
  *   Copyright (C) 2011  Théophile BASTIAN
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -270,7 +270,7 @@ inline std::string getConfigPath()
 	char username[100];
 	DWORD nUsername=sizeof(username);
 	if(!GetUserName(username, &nUsername))
-		outpath+="All Users";	
+		outpath+="All Users";
 	else
 		outpath+=username;
 	outpath+="/Application Data/";
@@ -300,4 +300,3 @@ void echoInput(bool echo)
 	SetConsoleMode( hConIn, mode );
 #endif
 }
-

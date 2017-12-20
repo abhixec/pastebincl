@@ -14,7 +14,7 @@
  *   See first license line.
  *
  * LICENSE:
- *   "Command-line pastebin" is a software designed to submit a "paste" on http://pastebin.com/ using a command-line tool
+ *   "Command-line pastebin" is a software designed to submit a "paste" on https://pastebin.com/ using a command-line tool
  *   Copyright (C) 2011  Théophile BASTIAN
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 		{
 			// Here we start real stuff!
 			CurlPost::init();
-			
+
 			CurlPost* request=preparePostRequest(parameterFlags, pr, getPasteContent());
 
 			std::cout << "Submitting paste..." << std::endl;
@@ -78,7 +78,7 @@ int main(int argc, char** argv)
 			std::string result=request->execute();
 			delete request;
 
-			if(result.find("https://pastebin.com/") == 0) // SUCCESS !
+			if(result.find("https://pastebin.com/") != std::string::npos) // SUCCESS !
 			{
 				std::cout << "Paste submitted successfully!" << std::endl
 						<< "URL: " << result << std::endl;
@@ -88,15 +88,14 @@ int main(int argc, char** argv)
 				std::cerr << "ERROR: Pastebin.com returned an error to your request." << std::endl
 						<< "Message: " << result << std::endl;
 			}
-			
+
 			CurlPost::clean();
-	
+
 		}
 	}
 	catch(...) {
 		std::cerr << "Exception catched. Program is terminating." << std::endl;
 	}
-	
+
 	return 0;
 }
-
